@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "/var/www/Django-REST-Framework/venv/bin/python3.6",
+    "git.ignoreLimitWarning": true
+}
