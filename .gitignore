@@ -1,5 +1,4 @@
-venv/
-
+venv
 things/__pycache__/
 things_rest/__pycache__/
 db.sqlite3
