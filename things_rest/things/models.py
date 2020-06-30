@@ -6,7 +6,7 @@ class Platform_to_bought(models.Model):
     name = models.CharField(max_length=200)
 
     def __str__(self):
-       return self.name
+       return self.name #coment 
 
 class Thing(models.Model):
     name = models.CharField(max_length=200)
