@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets, permissions
-from .models import Thing, Platform_to_bought
-from .serializers import ThingSerializers, UserSerializer, Platform_to_boughtSerializers
+from .models import Thing, PlatformToBought
+from .serializers import ThingSerializers, UserSerializer, PlatformToBoughtSerializers
 from django.contrib.auth import get_user_model
 
 
@@ -14,7 +14,7 @@ class ThingView(viewsets.ModelViewSet):
     queryset = Thing.objects.all()
     serializer_class = ThingSerializers
 
-class Platform_to_boughtView(viewsets.ModelViewSet):
-    queryset = Platform_to_bought.objects.all()
-    serializer_class = Platform_to_boughtSerializers
+class PlatformToBoughtView(viewsets.ModelViewSet):
+    queryset = PlatformToBought.objects.all()
+    serializer_class = PlatformToBoughtSerializers
     #permission_classes = (permissions.IsAuthenticatedOrReadOnly,)

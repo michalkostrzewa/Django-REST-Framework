@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Thing, Platform_to_bought
+from .models import Thing, PlatformToBought
 from django.contrib.auth import get_user_model
 
 
@@ -15,7 +15,7 @@ class ThingSerializers(serializers.HyperlinkedModelSerializer):
         fields = ('id','url','name', 'cost','user','note','bought_at','bought_on')
 
 
-class Platform_to_boughtSerializers(serializers.HyperlinkedModelSerializer):
+class PlatformToBoughtSerializers(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Platform_to_bought
+        model = PlatformToBought
         fields = ('id','url','name')
