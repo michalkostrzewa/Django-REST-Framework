@@ -1,8 +1,11 @@
 myvenv
 venv
-things/__pycache__/
-things_rest/__pycache__/
+things_rest/things/migrations/
+things_rest/things/__pycache__/
+things_rest/things_rest/__pycache__/
 __pycache__/
+things_rest/db.sqlite3
 db.sqlite3
 .vscode
 .pyc
+npm-debug.log
