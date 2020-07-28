@@ -17,4 +17,4 @@ class ThingView(viewsets.ModelViewSet):
 class PlatformToBoughtView(viewsets.ModelViewSet):
     queryset = PlatformToBought.objects.all()
     serializer_class = PlatformToBoughtSerializers
-    #permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    #permission_classes = [permissions.AllowAny]

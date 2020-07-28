@@ -39,19 +39,26 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'things',
+    'frontend',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware', #cors
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 ROOT_URLCONF = 'things_rest.urls'
+CORS_ORIGIN_ALLOW_ALL = True #cros
+CORS_ORIGIN_WHITELIST = (
+       'http://localhost:3000',
+)
 
 TEMPLATES = [
     {
@@ -122,5 +129,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES' : ('rest_framework.permissions.IsAuthenticatedOrReadOnly',)
+    'DEFAULT_PERMISSION_CLASSES' : (
+        #'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+        #'rest_framework.renderers.JSONRenderer',
+        #
+        'rest_framework.permissions.AllowAny',
+    )
 }
